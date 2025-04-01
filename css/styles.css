@@ -1,0 +1,41 @@
+body{
+    background-color: #f9ffef;
+    width: 95%;
+    margin: auto;
+}
+.nav p{
+    background-color: #801239;
+    border: 1px solid #801239;
+    font-family: "garlic-salt", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.nav a{
+    background-color: #ffffff;
+    border: 1px solid #801239;
+    font-family: "garlic-salt", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 25px;
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;
+    color: #801239;
+}
+.nav a:hover{
+    background-color: #801239;
+    color: #ffffff;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    position: fixed;
+    width: 95%;
+    margin:auto;
+    
+}
