@@ -5,7 +5,7 @@ body{
 }
 .nav p{
     background-color: #801239;
-    border: 1px solid #801239;
+    border: 2px solid #801239;
     font-family: "garlic-salt", sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -24,6 +24,10 @@ body{
     padding: 4px 8px 4px 8px;
     text-decoration: none;
     color: #801239;
+}
+#current-page{
+    color: #801239;
+    background-color: #b6d487;
 }
 .nav a:hover{
     background-color: #801239;
