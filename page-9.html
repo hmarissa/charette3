@@ -6,21 +6,38 @@
         <link href="css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="https://use.typekit.net/ygy5pdp.css">
         <style>
+        /* HTML: <div class="loader"></div> */
         .loader {
-        border: 16px solid #f3f3f3; /* Light grey */
-        border-top: 16px solid #801239; /* Blue */
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        animation: spin 2s linear infinite;
-        position: relative;
-        top:200px;
+        width: 200px;
         margin: auto;
+        aspect-ratio: 1;
+        color: #801239;
+        border: 2px solid;
+        display: grid;
+        box-sizing: border-box;
+        animation: l1 4s infinite linear; 
+        position: relative;
+        top: 200px;
         }
-
-        @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        .loader::before,
+        .loader::after {
+        content: "";
+        grid-area: 1/1;
+        margin: auto;
+        width: 70.7%;
+        aspect-ratio: 1;
+        border: 2px solid;
+        box-sizing: content-box;
+        animation: inherit;
+        }
+        .loader::after {
+        width: 50%;
+        aspect-ratio: 1;
+        border: 2px solid;
+        animation-duration: 2s;
+        }
+        @keyframes l1{
+        100% {transform:rotate(1turn)}
         }
          </style>
     </head>
@@ -34,8 +51,8 @@
             <a href="page-5.html">5</a>
             <a href="page-6.html">6</a>
             <a href="page-7.html">7</a>
-            <a id="current-page"  href="page-8.html">8</a>
-            <a href="page-9.html">9</a>
+            <a   href="page-8.html">8</a>
+            <a id="current-page" href="page-9.html">9</a>
             <a href="page-10.html">10</a>
             <a href="page-11.html">11</a>
             <a href="page-12.html">12</a>
