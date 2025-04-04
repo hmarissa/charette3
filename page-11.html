@@ -6,24 +6,9 @@
         <link href="css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="https://use.typekit.net/ygy5pdp.css">
         <style>
-         /* HTML: <div class="loader"></div> */
-        .loader {
-        height: 27px;
-        aspect-ratio: 5;
-        --c: #801239 90deg,#0000 0;
-        background:
-        conic-gradient(from 135deg at top   ,var(--c)),
-        conic-gradient(from -45deg at bottom,var(--c)) 12.5% 100%;
-        background-size: 20% 50%;
-        background-repeat: repeat-x;
-        clip-path: inset(0 60% 0 0);
-        animation: l17 1.2s infinite steps(7,jump-none) alternate;
-        margin: auto;
-        position: relative;
-        top:300px;
-        }
-        @keyframes l17{
-        to {clip-path: inset(0 0 0 60%)}
+        #follower{
+            width: 200px;
+            position: absolute;
         }
          </style>
     </head>
@@ -39,8 +24,8 @@
             <a href="page-7.html">7</a>
             <a href="page-8.html">8</a>
             <a  href="page-9.html">9</a>
-            <a id="current-page" href="page-10.html">10</a>
-            <a href="page-11.html">11</a>
+            <a  href="page-10.html">10</a>
+            <a id="current-page" href="page-11.html">11</a>
             <a href="page-12.html">12</a>
             <a href="page-13.html">13</a>
             <a href="page-14.html">14</a>
@@ -51,6 +36,16 @@
             <a href="page-19.html">19</a>
             <a href="page-20.html">20</a>
         </div>
-        <div class="loader"></div>
+        <img id="follower" src="img/IMG_4993.jpg" alt="Follower"> 
+          <script>
+            document.addEventListener('mousemove', (event) => { 
+    const follower = document.getElementById('follower'); 
+    const offsetX = 25; // Half of the image width 
+    const offsetY = 25; // Half of the image height 
+ 
+    follower.style.left = `${event.pageX - offsetX}px`; 
+    follower.style.top = `${event.pageY - offsetY}px`; 
+}); 
+          </script>
     </body>
 </html>

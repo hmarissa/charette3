@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loading...</title>
+        <link href="css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/ygy5pdp.css">
+        <style>
+            #mydiv {
+            position: absolute;
+            z-index: 9;
+            background-color: #f1f1f1;
+            border: 1px solid #d3d3d3;
+            text-align: center;
+            }
+            img{
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <p>Loading...</p>
+            <a href="index.html">1</a>
+            <a href="page-2.html">2</a>
+            <a href="page-3.html">3</a>
+            <a href="page-4.html">4</a>
+            <a href="page-5.html">5</a>
+            <a href="page-6.html">6</a>
+            <a href="page-7.html">7</a>
+            <a href="page-8.html">8</a>
+            <a  href="page-9.html">9</a>
+            <a  href="page-10.html">10</a>
+            <a  href="page-11.html">11</a>
+            <a id="current-page" href="page-12.html">12</a>
+            <a href="page-13.html">13</a>
+            <a href="page-14.html">14</a>
+            <a href="page-15.html">15</a>
+            <a href="page-16.html">16</a>
+            <a href="page-17.html">17</a>
+            <a href="page-18.html">18</a>
+            <a href="page-19.html">19</a>
+            <a href="page-20.html">20</a>
+        </div>
+        <div id="mydiv">
+        <img src="img/IMG_4705.jpg">
+        </div>
+        <script>dragElement(document.getElementById("mydiv"));
+
+            function dragElement(elmnt) {
+              var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+              if (document.getElementById(elmnt.id + "header")) {
+                // if present, the header is where you move the DIV from:
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+              } else {
+                // otherwise, move the DIV from anywhere inside the DIV:
+                elmnt.onmousedown = dragMouseDown;
+              }
+            
+              function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+              }
+            
+              function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+              }
+            
+              function closeDragElement() {
+                // stop moving when mouse button is released:
+                document.onmouseup = null;
+                document.onmousemove = null;
+              }
+            }</script>
+    </body>
+</html>
