@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loading...</title>
+        <link href="css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/ygy5pdp.css">
+        <style>
+           body {
+  display: grid;
+  /* place-items: center; */
+  height: 100vh;
+}
+
+.split-image-container {
+  display: flex;
+ margin:auto;
+}
+
+.split-image-container .split-image {
+  width: 300px;
+  height: 300px;
+  background: url(https://t3.ftcdn.net/jpg/02/47/02/84/360_F_247028431_yPo8nwG9HuQN6oHyix8YnhYBeOXtF0c4.jpg);
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  transition: all 400ms ease;
+}
+
+.split-image-container .split-image:nth-child(2) {
+  background-position-x: -320px;
+}
+
+.split-image-container:hover .split-image {
+  margin: 0 24px;
+  transform: scale(1.08) rotateZ(3deg);
+}
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <p>Loading...</p>
+            <a href="index.html">1</a>
+            <a href="page-2.html">2</a>
+            <a href="page-3.html">3</a>
+            <a href="page-4.html">4</a>
+            <a href="page-5.html">5</a>
+            <a href="page-6.html">6</a>
+            <a href="page-7.html">7</a>
+            <a href="page-8.html">8</a>
+            <a  href="page-9.html">9</a>
+            <a  href="page-10.html">10</a>
+            <a  href="page-11.html">11</a>
+            <a  href="page-12.html">12</a>
+            <a href="page-13.html">13</a>
+            <a id="current-page" href="page-14.html">14</a>
+            <a href="page-15.html">15</a>
+            <a href="page-16.html">16</a>
+            <a href="page-17.html">17</a>
+            <a href="page-18.html">18</a>
+            <a href="page-19.html">19</a>
+            <a href="page-20.html">20</a>
+        </div>
+        <div class="split-image-container">
+            <span class="split-image"></span>
+            <span class="split-image"></span>
+          </div>
+        <script></script>
+    </body>
+</html>
